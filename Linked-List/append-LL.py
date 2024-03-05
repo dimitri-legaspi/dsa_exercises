@@ -17,6 +17,7 @@ class LinkedList:
             print(temp.value)
             temp = temp.next
 
+    #  Add a node to the end of the linked list
     def append(self, value):
         # Creates a new node
         new_node = Node(value)
