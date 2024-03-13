@@ -110,31 +110,16 @@ class LinkedList:
         return temp
 
     def reverse(self):
-        # set temp to the head of the LL
         temp = self.head
-        # switch the head with the tail
         self.head = self.tail
-        # set the tail to temp
         self.tail = temp
-        # set after variable to the next node after the head
         after = temp.next
-        # we set before variable to None, none will essentially
-        # be before the head
         before = None
-        # iterate through the length of the LL
         for _ in range(self.length):
-            # set after to temp.next, which is the arrow pointing toward the
-            # other node
             after = temp.next
-        # set temp.next to before, which turns the head to point in the
-        # other direction
             temp.next = before
-        # we set before to temp so that it is set to the next node
             before = temp
-        # set temp to after which moves across the gap that is made
             temp = after
-        # at the end of the iteration after will be equal to None
-        # and then temp.next will be set to the last node
 
 
 my_linked_list = LinkedList(1)
